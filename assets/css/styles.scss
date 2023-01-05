@@ -1,0 +1,207 @@
+/* import inter font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+* {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    /* color lightPink */
+    --color-lightPink: rgb(251, 207, 232);
+    --color-darkPink: rgb(236, 72, 153);
+    // dark grey
+    --color-darkGrey: rgb(51, 51, 51);
+}
+
+// style scrollbar
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-lightPink);
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(251, 207, 232, 0.7);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    height: 10vh;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    color: var(--color-darkPink);
+    font-size: 1.7rem;
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+
+        li {
+            a {
+                text-decoration: none;
+                color: var(--color-darkGrey);
+                font-size: 1.3rem;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+main {
+    background-color: var(--color-lightPink);
+    background-image: url("../images/Home6.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 1643/2000;
+}
+
+section.home {
+    height: 80vh;
+    padding: 0 10%;
+    article {
+        padding-top: 60vh;
+        h1 {
+            font-size: 6rem;
+            font-weight: bold;
+            color: var(--color-darkPink);
+        }
+        h2 {
+            font-size: 3rem;
+            font-weight: normal;
+            color: var(--color-darkGrey);
+            // -webkit-text-stroke: 1px #fff;
+        }
+    }
+}
+
+section.about {
+    padding-left: 25%;
+    font-size: 3rem;
+    color: white;
+    height: 100vh;
+    article {
+        width: 55%;
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 11px;
+        margin-top: 40vh;
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: var(--color-darkPink);
+            margin-bottom: 5%;
+        }
+        p {
+            font-size: 1.5rem;
+            font-weight: normal;
+            color: #000;
+        }
+    }
+}
+
+section.contact {
+    padding-left: 25%;
+    font-size: 3rem;
+    margin-top: 0;
+    h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+        color: var(--color-darkPink);
+    }
+    p {
+        font-size: 1.5rem;
+        font-weight: normal;
+        color: var(--color-darkPink);
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+
+// mobile
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 0 5%;
+        ul {
+            display: none;
+        }
+    }
+    main {
+        background-position: -10vh -30vh;
+    }
+    section.home {
+        height: 80vh;
+        padding: 0 5%;
+        article {
+            padding-top: 25vh;
+            h1 {
+                font-size: 3rem;
+                font-weight: bold;
+                color: var(--color-darkPink);
+            }
+            h2 {
+                font-size: 1.5rem;
+                font-weight: normal;
+                color: var(--color-darkGrey);
+                // -webkit-text-stroke: 1px #fff;
+            }
+        }
+    }
+    section.about {
+        padding-left: 0;
+        font-size: 3rem;
+        color: white;
+        height: 80vh;
+        article {
+            width: 100%;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 0px;
+            margin-top: 0vh;
+            h1 {
+                font-size: 3rem;
+                font-weight: bold;
+                color: var(--color-darkPink);
+                margin-bottom: 5%;
+            }
+            p {
+                font-size: 1.2rem;
+                font-weight: normal;
+                color: #000;
+            }
+        }
+    }
+    section.contact {
+        padding: 0 5%;
+        font-size: 3rem;
+        margin-top: 0;
+        h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: var(--color-darkPink);
+        }
+        p {
+            font-size: 1.5rem;
+            font-weight: normal;
+            color: var(--color-darkPink);
+            padding-bottom: 5vh;
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
